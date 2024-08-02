@@ -43,7 +43,7 @@ for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
         var audio = new Audio("sounds/crash.mp3");
         audio.play();
         break;
-      default:
+      default: console.log(buttonInnerHTML);
         break;
     }
   });
