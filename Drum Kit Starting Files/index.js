@@ -9,7 +9,10 @@
 for (let i=0 ; i < document.querySelectorAll(".drum").length ; i++)
     {
     document.querySelectorAll(".drum")[i].addEventListener("click",function(){
-        alert("I got clicked!");
+    //   here a new variable is declared to which an audio object is assigned
+    //then we use the method called .play() to play the audio   
+    var audio = new Audio('sounds/tom-1.mp3');
+        audio.play();
         });
 
 }
