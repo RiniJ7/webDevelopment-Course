@@ -22,7 +22,7 @@ if (randomNumber1 === 5) {
   document.querySelector(".img1").setAttribute("src", "./images/dice5.png");
 }
 
-if (randomNumber1 === 3) {
+if (randomNumber1 === 6) {
   document.querySelector(".img6").setAttribute("src", "./images/dice6.png");
 }
 
@@ -45,7 +45,19 @@ if (randomNumber2 === 1) {
     document.querySelector(".img2").setAttribute("src", "./images/dice5.png");
   }
   
-  if (randomNumber2 === 3) {
+  if (randomNumber2 === 6) {
     document.querySelector(".img2").setAttribute("src", "./images/dice6.png");
   }
   
+
+//   manipulating the text using innerHTML
+
+
+if (randomNumber1 > randomNumber2){
+document.querySelector("h1").innerHTML = "Player 1 is winner ";
+} else if (randomNumber2 > randomNumber1)
+{
+document.querySelector("h1").innerHTML = "Player 2 is winner";
+} else {
+    document.querySelector("h1").innerHTML = "Draw";
+}
