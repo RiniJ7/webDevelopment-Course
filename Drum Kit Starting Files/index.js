@@ -4,54 +4,69 @@
 //     alert("I got clicked!")
 // }
 
-//using anonymus function
+//using anonymous function
+//for detecting key press
 
 for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     //   here a new variable is declared to which a new audio object is assigned
     //then we use the method called .play() to play the audio
 
-    this.style.color = "white";
+   // this.style.color = "white";
     //to modify the innerHTML
     var buttonInnerHTML = this.innerHTML;
-    switch (buttonInnerHTML) {
-      case "w":
-        var audio = new Audio("sounds/tom-1.mp3");
-        audio.play();
-        break;
-      case "a":
-        var audio = new Audio("sounds/tom-2.mp3");
-        audio.play();
-        break;
-      case "s":
-        var audio = new Audio("sounds/tom-3.mp3");
-        audio.play();
-        break;
-      case "d":
-        var audio = new Audio("sounds/tom-4.mp3");
-        audio.play();
-        break;
-      case "j":
-        var audio = new Audio("sounds/snare.mp3");
-        audio.play();
-        break;
-      case "k":
-        var audio = new Audio("sounds/kick-bass.mp3");
-        audio.play();
-        break;
-      case "l":
-        var audio = new Audio("sounds/crash.mp3");
-        audio.play();
-        break;
-      default: console.log(buttonInnerHTML);
-      break;
-    }
+
+    makeSound(buttonInnerHTML)
+  
   });
 }
 
+//detecting keyboard press
+
 document.addEventListener("keypress", function(event) {
-console.log(event);
-});
+  //console.log(event);
+  makeSound(event.key);
+  });
+
+//function to make music
+
+function makeSound(key) { 
+  switch (buttonInnerHTML) {
+    case "w":
+      var audio = new Audio("sounds/tom-1.mp3");
+      audio.play();
+      break;
+    case "a":
+      var audio = new Audio("sounds/tom-2.mp3");
+      audio.play();
+      break;
+    case "s":
+      var audio = new Audio("sounds/tom-3.mp3");
+      audio.play();
+      break;
+    case "d":
+      var audio = new Audio("sounds/tom-4.mp3");
+      audio.play();
+      break;
+    case "j":
+      var audio = new Audio("sounds/snare.mp3");
+      audio.play();
+      break;
+    case "k":
+      var audio = new Audio("sounds/kick-bass.mp3");
+      audio.play();
+      break;
+    case "l":
+      var audio = new Audio("sounds/crash.mp3");
+      audio.play();
+      break;
+    default: console.log(buttonInnerHTML);
+    break;
+  }
+}
+
+
+
 
 //this you can tap the identity of the button that triggered the event
 
