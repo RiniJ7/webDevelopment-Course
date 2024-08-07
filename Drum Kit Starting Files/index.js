@@ -44,10 +44,14 @@ for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
         audio.play();
         break;
       default: console.log(buttonInnerHTML);
-        break;
+      break;
     }
   });
 }
+
+document.addEventListener("keypress", function(event) {
+console.log(event);
+});
 
 //this you can tap the identity of the button that triggered the event
 
