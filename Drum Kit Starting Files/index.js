@@ -14,9 +14,10 @@ for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
 
    // this.style.color = "white";
     //to modify the innerHTML
+
     var buttonInnerHTML = this.innerHTML;
 
-    makeSound(buttonInnerHTML)
+    makeSound(buttonInnerHTML);
   
   });
 }
@@ -31,7 +32,7 @@ document.addEventListener("keypress", function(event) {
 //function to make music
 
 function makeSound(key) { 
-  switch (buttonInnerHTML) {
+  switch (key) {
     case "w":
       var audio = new Audio("sounds/tom-1.mp3");
       audio.play();
@@ -60,10 +61,10 @@ function makeSound(key) {
       var audio = new Audio("sounds/crash.mp3");
       audio.play();
       break;
-    default: console.log(buttonInnerHTML);
+    default: console.log(key);
     break;
   }
-}
+};
 
 
 
