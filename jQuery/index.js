@@ -75,3 +75,14 @@ $("h1").on("mouseover", function() {
 
 
 $("h1").before("<button>New</button>");
+$("h1").after("<button>New</button>");
+
+//the buttons are created within the h1
+//before the h1 text, but within the h1 tag
+$("h1").prepend("<button>New</button>");
+//after the h1 text, but within the h1 tag
+$("h1").append("<button>New</button>");
+
+
+//removing button elements
+//$("button").remove();
