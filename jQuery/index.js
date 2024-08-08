@@ -24,3 +24,7 @@ $("h1").removeClass("big-title");
 
 $("h1").addClass("big-title margin-50");
 
+// checking if a particular element has a class
+
+//this returns a true or false if the element has a particular class
+$("h1").hasClass("margin-50");
