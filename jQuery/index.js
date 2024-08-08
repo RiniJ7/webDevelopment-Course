@@ -86,3 +86,48 @@ $("h1").append("<button>New</button>");
 
 //removing button elements
 //$("button").remove();
+
+//showing and hiding html elements
+
+$("button").on("click", function(){
+    $("h1").hide()
+})
+
+$("button").on("click", function(){
+    $("h1").show()
+})
+
+//toggling between hide and show
+$("button").on("click", function(){
+    $("h1").toggle()
+})
+
+//progressive hiding
+$("button").on("click", function(){
+    $("h1").fadeout()
+})
+
+
+//progressive showing
+$("button").on("click", function(){
+    $("h1").fadein()
+})
+
+//more
+$("button").on("click", function(){
+    $("h1").slideToggle()
+})
+
+//custom animation
+
+//progressive showing
+$("button").on("click", function(){
+    $("h1").animate({
+        opacity: 0.5
+    })
+})
+
+//combining methods
+$("button").on("click", function(){
+$("h1").slideUp().slideDown().animate({opacity:0.5})
+});
