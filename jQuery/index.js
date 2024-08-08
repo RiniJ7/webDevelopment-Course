@@ -57,7 +57,9 @@ $("button").click(function(){
     $("h1").css("color", "purple");
 });
 
-//adding the keypress event
+//adding the keypress event , returns the key pressed
 $("input").keypress(function(event) {
     console.log(event.key);
+//modifying the text based on key press
+    $("h1").text(event.key);
 })
