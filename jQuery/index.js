@@ -56,3 +56,8 @@ $("h1").click(function(){
 $("button").click(function(){
     $("h1").css("color", "purple");
 });
+
+//adding the keypress event
+$("input").keypress(function(event) {
+    console.log(event.key);
+})
