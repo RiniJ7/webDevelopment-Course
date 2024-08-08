@@ -63,3 +63,9 @@ $("input").keypress(function(event) {
 //modifying the text based on key press
     $("h1").text(event.key);
 })
+
+//mouseover method
+
+$("h1").on("mouseover", function() {
+    $("h1").css("color", "purple");
+});
