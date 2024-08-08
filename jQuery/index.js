@@ -51,3 +51,8 @@ $("h1").attr("class");
 $("h1").click(function(){
     $("h1").css("color","purple")
 });
+
+//adding click listener to all buttons without using the for loop in the element selector
+$("button").click(function(){
+    $("h1").css("color", "purple");
+});
