@@ -42,3 +42,7 @@ console.log($("img").attr("src"));
 //setting the value of the attribute
 
 $("a").attr("href", "wwww.yahoo.com");
+
+//getting a list of all parameters in the class
+
+$("h1").attr("class");
