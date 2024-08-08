@@ -28,3 +28,17 @@ $("h1").addClass("big-title margin-50");
 
 //this returns a true or false if the element has a particular class
 $("h1").hasClass("margin-50");
+
+//adding text using jQuery : two ways of doing this
+
+$("h1").text("Good bye");
+$("button").text("Don't click me");
+$("button").html("<em>Hello</em>");
+
+//manipulating attributes using jQuery
+//getting the value of an attribute
+console.log($("img").attr("src"));
+
+//setting the value of the attribute
+
+$("a").attr("href", "wwww.yahoo.com");
