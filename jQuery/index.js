@@ -69,3 +69,9 @@ $("input").keypress(function(event) {
 $("h1").on("mouseover", function() {
     $("h1").css("color", "purple");
 });
+
+//adding new elements with jQuery
+//here i am creating a button element with text 'New'
+
+
+$("h1").before("<button>New</button>");
