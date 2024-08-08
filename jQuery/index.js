@@ -46,3 +46,8 @@ $("a").attr("href", "wwww.yahoo.com");
 //getting a list of all parameters in the class
 
 $("h1").attr("class");
+
+//using event listeners using jQuery
+$("h1").click(function(){
+    $("h1").css("color","purple")
+});
