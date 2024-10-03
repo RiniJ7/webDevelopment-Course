@@ -7,11 +7,20 @@
 
 <body>
   <h1>Secrets</h1>
+
+  <!-- Form that submits data to the "/check" route using the POST method -->
   <form action="/check" method="POST">
+    
+    <!-- Label for the password input field -->
     <label for="password">Password:</label>
+    
+    <!-- Input field for the password, with a "required" attribute to ensure it's not left blank -->
     <input type="text" id="password" name="password" required>
+    
+    <!-- Submit button to send the form data -->
     <input type="submit" value="Submit">
   </form>
+  
 </body>
 
 </html>
