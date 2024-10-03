@@ -3,39 +3,43 @@
 
 <head>
   <meta charset="UTF-8">
+  <!-- Ensures proper rendering and touch zooming on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EJS Tags</title>
 </head>
 
 <body>
   <h1>
-    <!-- Tite goes here -->
-     <%= title %>
+    <!-- Title is dynamically injected here using the EJS tag -->
+    <%= title %>
   </h1>
-  <p>Current second:
-    <!-- Current second goes here -->
-     <%= seconds %>
-  </p>
-  <%if (seconds % 2 === 0) {%>
-  <ul>
-    <!-- List goes here if current second is even. -->
-    <% items.forEach((fruit)=>{  %>
-      <%= fruit %>
-      <% }) %>
   
-    <!-- Otherwise it should display the following: -->
-    <!-- <p>No items to display</p> -->
-  </ul>
- <% } else { %>
-  <p>No items to display</p>
+  <p>Current second:
+    <!-- Displays the current second dynamically -->
+    <%= seconds %>
+  </p>
+  
+  <!-- Conditional logic: checks if the current second is even -->
+  <% if (seconds % 2 === 0) { %>
+    <ul>
+      <!-- If the second is even, this loop iterates through the 'items' array and displays each fruit -->
+      <% items.forEach((fruit) => { %>
+        <li><%= fruit %></li>
+      <% }) %>
+    </ul>
+  
+  <!-- Else: when the second is odd, display a message saying no items -->
+  <% } else { %>
+    <p>No items to display</p>
   <% } %>
+  
   <p>
-    <!-- HTML content goes here -->
-     <%- htmlContent %>
+    <!-- Renders unescaped HTML content (e.g., if 'htmlContent' includes HTML tags, they will be rendered) -->
+    <%- htmlContent %>
   </p>
 
-  <!-- Footer goes here -->
-   <%- include("footer.ejs") %>
+  <!-- Footer is dynamically included using the EJS 'include' tag -->
+  <%- include("footer.ejs") %>
 </body>
 
 </html>
