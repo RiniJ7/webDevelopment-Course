@@ -10,6 +10,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
+
 app.post("/submit", (req, res) => {
   const numLetters = req.body["fName"].length + req.body["lName"].length;
   console.log(numLetters);
